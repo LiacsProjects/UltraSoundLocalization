@@ -22,12 +22,10 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.read() == 'S'){
     delay(300);
     updateSonar(); // update the distance array
     Serial.println(distance[0]);
-    Serial.println(distance[0]);
-  }
+    Serial.println(distance[1]);
 }
 
 // takes a new reading from each sensor and updates the
