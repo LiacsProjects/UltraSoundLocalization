@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-class Localization:
+class Localization3D:
 
     def __init__(self):
         self.state = {'pos':False}
@@ -35,7 +35,7 @@ class Localization:
         self.state['pos'] = True
         return positions
     
-class LocalizationPlot():
+class LocalizationPlot3D():
     #plotting a 3D scatterplot
     def positions3D(*samples: Localization) -> None:
         #plot all points using the sample.positions data
@@ -49,10 +49,3 @@ class LocalizationPlot():
         ax.set_ylabel('X-axis')
         ax.set_zlabel('Y-axis')
         plt.show()
-
-
-# An example from our experiments
-# sample = Localization()
-# positions = sample.locate('Audio/Experiments/Meting11 02 192kHz.wav', [[19000,19500],[20000,20500],[21000,21500]], 0.2, [[0.0,0.0,0.0],[3.15,0.0,0.0],[0.0,4.0,0.0]],[0.06,0.78,0.55],fft_window_size=8192, noise_level=15, samples_per_second=22)
-# LocalizationPlot.spectrum(sample)
-# LocalizationPlot.positions(sample)

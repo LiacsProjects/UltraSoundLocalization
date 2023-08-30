@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-class Localization:
+class Localization2D:
 
     def __init__(self):
         self.state = {'pos':False}
@@ -164,7 +164,7 @@ class Localization:
         self.state['pos'] = True
         return positions
     
-class LocalizationPlot():
+class LocalizationPlot2D():
     #plotting a 2D scatterplot
     def positions(*samples: Localization) -> None:
         #plot all points using the sample.positions data
